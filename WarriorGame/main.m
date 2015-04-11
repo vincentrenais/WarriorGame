@@ -13,16 +13,18 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-        Warrior *player1;
-        Warrior *player2;
+        Warrior *player1 = [[Warrior alloc] initWithName:@"Joe"];
         
-        NSLog(@"\nEnter your name, player 1: ");
+        Warrior *player2 = [[Warrior alloc] initWithName:@"Mike"];
         
-        scanf("%s", name1);
-        
-        NSLog(@"\nEnter your name, player 2: ");
-        
-        scanf("%s", name2);
+        if ([player1 life] >  0 && [player2 life] > 0) {
+            [player1 chooseActionAgainst:player2];
+            [player2 chooseActionAgainst:player1];
+        } else if  ([player1 life] == 0){
+            NSLog(@"Player2 won the game");
+        } else {
+            NSLog(@"Player 1 won the game");
+        }
         
     }
     return 0;

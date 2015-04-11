@@ -11,18 +11,16 @@
 @implementation Warrior
 
 
-- (instancetype)init
+- (instancetype)initWithName:(NSString *)name
 {
     self = [super init];
     if (self) {
         self.life = 100;
-        self.name1 = @"John";
-        self.name2 = @"Mike";
     }
     return self;
 }
 
-- (void) fight:(Warrior *)otherPlayer{
+- (void) chooseAction{
 
     int answer = 0;
     
@@ -38,15 +36,16 @@
     }
 }
 
-- (void) choose{
 
+- (void) fight:(Warrior *)otherPlayer{
 
-
+    
 }
 
-- (void) receiveDamage{
 
-    vie -=
+- (void) receiveDamages:(int)damages {
+
+    self.life -= 10;
 
 }
 

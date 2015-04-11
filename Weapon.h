@@ -10,8 +10,8 @@
 
 @interface Weapon : NSObject
 
-@property int damage;
+@property int damages;
 
--(instancetype)init;
+-(instancetype)initWithDamages:(int)damages;
 
 @end

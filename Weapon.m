@@ -10,11 +10,10 @@
 
 @implementation Weapon
 
-- (instancetype)init
-{
+- (instancetype)initWithDamages:(int)damages {
     self = [super init];
     if (self) {
-        self.damage = 10;
+        self.damages = 0;
     }
     return self;
 }

@@ -16,10 +16,10 @@
 @property NSString *name1;
 @property NSString *name2;
 
-- (instancetype)init;
-- (void) fight:(warrior *)otherPlayer
-- (void) choose;
-- (void) receiveDamage;
+- (instancetype)initWithName:(NSString *)name1;
+- (void) chooseActionAgainst:(Warrior *)otherPlayer;
+- (void) fight:(Warrior *)otherPlayer;
+- (void) receiveDamages;
 - (void) improveSword;
 
 @end
