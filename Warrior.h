@@ -11,11 +11,10 @@
 @interface Warrior : NSObject
 
 @property int life;
+@property NSString *name;
 @property int swordPower;
-@property NSString *player1;
-@property NSString *player2;
 
-- (instancetype)init;
+- (instancetype)initWithName:(NSString *)playerName;
 - (void) chooseActionAgainst:(Warrior *)otherPlayer;
 - (void) fight:(Warrior *)otherPlayer;
 - (void) improveWeapon;
