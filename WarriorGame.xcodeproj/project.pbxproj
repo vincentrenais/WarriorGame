@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B71003271AD9B1CD00945984 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B71003261AD9B1CD00945984 /* main.m */; };
+		B710032F1AD9B27900945984 /* Warrior.m in Sources */ = {isa = PBXBuildFile; fileRef = B710032E1AD9B27900945984 /* Warrior.m */; };
+		B71003321AD9B28900945984 /* Weapon.m in Sources */ = {isa = PBXBuildFile; fileRef = B71003311AD9B28900945984 /* Weapon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		B71003231AD9B1CD00945984 /* WarriorGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WarriorGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71003261AD9B1CD00945984 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B710032D1AD9B27900945984 /* Warrior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Warrior.h; sourceTree = "<group>"; };
+		B710032E1AD9B27900945984 /* Warrior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Warrior.m; sourceTree = "<group>"; };
+		B71003301AD9B28900945984 /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weapon.h; sourceTree = "<group>"; };
+		B71003311AD9B28900945984 /* Weapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weapon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,10 @@
 		B710031A1AD9B1CD00945984 = {
 			isa = PBXGroup;
 			children = (
+				B71003301AD9B28900945984 /* Weapon.h */,
+				B71003311AD9B28900945984 /* Weapon.m */,
+				B710032D1AD9B27900945984 /* Warrior.h */,
+				B710032E1AD9B27900945984 /* Warrior.m */,
 				B71003251AD9B1CD00945984 /* WarriorGame */,
 				B71003241AD9B1CD00945984 /* Products */,
 			);
@@ -118,6 +128,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71003321AD9B28900945984 /* Weapon.m in Sources */,
+				B710032F1AD9B27900945984 /* Warrior.m in Sources */,
 				B71003271AD9B1CD00945984 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
