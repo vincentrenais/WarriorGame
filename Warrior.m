@@ -11,47 +11,42 @@
 @implementation Warrior
 
 
-- (instancetype)initWithName:(NSString *)name
+- (instancetype)init
 {
     self = [super init];
     if (self) {
         self.life = 100;
+        self.swordPower = 10;
     }
     return self;
 }
 
-- (void) chooseAction{
+- (void) chooseActionAgainst:(Warrior *)otherPlayer{
 
     int answer = 0;
-    
+
     do {
-        NSLog(@"\nChoose between:\n1.Fighting!\n2.Improving your weapon\nYour choice: ");
+        NSLog(@"\nThis is your turn %@, choose wisely...\n1.Fighting!\n2.Improving your weapon\nYour choice: ", self);
         scanf("%d", &answer);
     } while (answer != 1 && answer != 2);
     
     if (answer == 1) {
         [self fight:otherPlayer];
     } else {
-        [self improveSword];
+        [self improveWeapon];
     }
 }
 
 
 - (void) fight:(Warrior *)otherPlayer{
 
-    
+    otherPlayer.life = otherPlayer.life - 10;
 }
 
 
-- (void) receiveDamages:(int)damages {
+- (void) improveWeapon {
 
-    self.life -= 10;
-
-}
-
-- (void) improveSword{
-
-
+    self.swordPower = self.swordPower + 10;
 
 }
 

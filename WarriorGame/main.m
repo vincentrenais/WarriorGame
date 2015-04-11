@@ -8,22 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "Warrior.h"
-#import "Weapon.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-        Warrior *player1 = [[Warrior alloc] initWithName:@"Joe"];
+        Warrior *Achilles = [[Warrior alloc] init];
+        Warrior *Spartacus = [[Warrior alloc] init];
         
-        Warrior *player2 = [[Warrior alloc] initWithName:@"Mike"];
         
-        if ([player1 life] >  0 && [player2 life] > 0) {
-            [player1 chooseActionAgainst:player2];
-            [player2 chooseActionAgainst:player1];
-        } else if  ([player1 life] == 0){
-            NSLog(@"Player2 won the game");
+        if ([Achilles life] >  0 && [Spartacus life] > 0) {
+            [Achilles chooseActionAgainst:Spartacus];
+            [Achilles chooseActionAgainst:Spartacus];
+        } else if  ([Achilles life] == 0){
+            NSLog(@"Spartacus won the game");
         } else {
-            NSLog(@"Player 1 won the game");
+            NSLog(@"Achilles won the game");
         }
         
     }

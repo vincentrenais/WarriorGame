@@ -7,19 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Weapon.h"
 
 @interface Warrior : NSObject
 
-@property Weapon *sword;
 @property int life;
-@property NSString *name1;
-@property NSString *name2;
+@property int swordPower;
+@property NSString *player1;
+@property NSString *player2;
 
-- (instancetype)initWithName:(NSString *)name1;
+- (instancetype)init;
 - (void) chooseActionAgainst:(Warrior *)otherPlayer;
 - (void) fight:(Warrior *)otherPlayer;
-- (void) receiveDamages;
-- (void) improveSword;
+- (void) improveWeapon;
 
 @end
