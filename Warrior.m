@@ -11,6 +11,8 @@
 @implementation Warrior
 
 
+// initialise each object with a name, a life level and a sword power.
+
 - (instancetype)initWithName:(NSString *)playerName {
     self = [super init];
     if (self) {
@@ -20,6 +22,8 @@
     }
     return self;
 }
+
+// Method to let the player choose the action they want to perform
 
 - (void) chooseActionAgainst:(Warrior *)otherPlayer{
 
@@ -39,12 +43,15 @@
     }
 }
 
+// Method to decrease the life of the attaqued player
 
 - (void) fight:(Warrior *)otherPlayer{
 
     otherPlayer.life = otherPlayer.life - self.swordPower;
 }
 
+
+// Method to increase the sword power of the player
 
 - (void) improveWeapon {
 
