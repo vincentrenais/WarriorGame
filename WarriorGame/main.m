@@ -16,13 +16,19 @@ int main(int argc, const char * argv[]) {
         Warrior *player2 = [[Warrior alloc] initWithName:@"Spartacus"];
         
         
-        if ([player1 life] >  0 && [player2 life] > 0) {
+        while ([player1 life] >  0 && [player2 life] > 0) {
             [player1 chooseActionAgainst:player2];
+            
+            if ([player2 life] == 0) {
+                continue;
+            }
             [player2 chooseActionAgainst:player1];
-        } else if  ([player1 life] == 0){
-            NSLog(@"Spartacus won the game");
-        } else {
-            NSLog(@"Achilles won the game");
+        }
+        
+        if  ([player1 life] == 0){
+            NSLog(@"\n%@ won the game", player2.name);
+        } else if  ([player2 life] == 0){
+            NSLog(@"\n%@ won the game", player1.name);
         }
         
     }
